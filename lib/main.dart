@@ -1,3 +1,4 @@
+import 'package:apipractise/views/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -16,8 +17,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('API testing')),
+    return const Scaffold(
+      body: HomePage(),
     );
   }
 }
