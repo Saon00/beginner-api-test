@@ -12,13 +12,13 @@ String postToJson(List<Post> data) =>
 
 class Post {
   int userId;
-  int id;
+  int? id;
   String title;
   String body;
 
   Post({
     required this.userId,
-    required this.id,
+    this.id,
     required this.title,
     required this.body,
   });
