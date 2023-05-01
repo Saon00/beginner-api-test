@@ -1,6 +1,5 @@
+import 'package:apipractise/models/post.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,10 +9,36 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<Post>? lists;
+  var isLoaded = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // fetch data from API
+    getData();
+  }
+
+
+  getData() async{
+    // posts = await 
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Home Page')),
+      body: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                child: const Text('Hi'),
+              ),
+            );
+          }),
     );
   }
 }
